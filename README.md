@@ -20,37 +20,12 @@ A modern, animated static website for Authkeep - enterprise-grade solutions for 
 
 ## Deploy to GitHub Pages
 
-### Option 1: From repository root
+This repo uses GitHub Actions to deploy. See **[DEPLOYMENT.md](DEPLOYMENT.md)** for the full guide including **Namecheap custom domain** setup.
 
-1. Create a new GitHub repository
-2. Push this folder's contents to the repo
-3. Go to **Settings** → **Pages**
-4. Under **Source**, select **Deploy from a branch**
-5. Select `main` branch and `/ (root)` folder
-6. Save - your site will be live at `https://<username>.github.io/<repo>/`
-
-### Option 2: Using GitHub Actions (optional)
-
-Create `.github/workflows/deploy.yml`:
-
-```yaml
-name: Deploy to GitHub Pages
-
-on:
-  push:
-    branches: [main]
-
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./
-```
+**Quick start:**
+1. Push to `main` — the workflow deploys to `gh-pages`
+2. **Settings** → **Pages** → Source: **Deploy from a branch** → Branch: `gh-pages`
+3. Site live at `https://binayapuri.github.io/Authkeep/`
 
 ## Local Development
 

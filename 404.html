@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Page Not Found | Authkeep</title>
+  <link rel="icon" type="image/png" href="authkeep.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0a0e17;
+      --primary: #00d4aa;
+      --text: #e2e8f0;
+      --text-muted: #94a3b8;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      text-align: center;
+    }
+    h1 { font-size: 6rem; font-weight: 700; color: var(--primary); margin-bottom: 0.5rem; }
+    p { color: var(--text-muted); margin-bottom: 2rem; font-size: 1.125rem; }
+    a {
+      display: inline-block;
+      padding: 1rem 2rem;
+      background: linear-gradient(135deg, var(--primary), #00a884);
+      color: var(--bg);
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 12px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    a:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 24px rgba(0, 212, 170, 0.4);
+    }
+  </style>
+</head>
+<body>
+  <h1>404</h1>
+  <p>Page not found. Let's get you back on track.</p>
+  <!-- Use / for custom domain; change to /Authkeep/ if using github.io/Authkeep only -->
+  <a href="/">Back to Home</a>
+</body>
+</html>
