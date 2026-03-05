@@ -139,6 +139,55 @@ The `404.html` links to `/` (home). If you're using **only** the GitHub Pages UR
 
 ---
 
+## Troubleshooting: "Can't See Site in Chrome"
+
+### CRITICAL: Redirecting to gocomper.com?
+
+If www.authkeep.com redirects to **gocomper.com** (a "Category Search" page), your domain is using **Namecheap's Domain Parking**. Fix it:
+
+1. **Namecheap** → **Domain List** → **Manage** (next to authkeep.com)
+2. Look for **"Domain"** or **"Hosting"** section
+3. Find **"Domain Parking"**, **"CashParking"**, or **"Parking Page"** — **DISABLE** or **Turn Off**
+4. In **Advanced DNS**, remove any record pointing to:
+   - `parkingpage.namecheap.com`
+   - `gocomper.com`
+   - Any URL Redirect that goes to gocomper
+5. Ensure only these remain for your site:
+   - **CNAME** `www` → `binayapuri.github.io`
+   - **Redirect Domain** `authkeep.com` → `https://www.authkeep.com` (in the Redirect section, NOT in DNS)
+6. Wait 5–15 minutes, then try **https://www.authkeep.com** again
+
+---
+
+### Other issues
+
+The site is live at **https://binayapuri.github.io/Authkeep/** (this works even if custom domain doesn't). If you can't see it:
+
+### 1. Use the correct URL
+- **Use:** `https://www.authkeep.com` (with **www** and **https**)
+- **Avoid:** `authkeep.com` alone — the redirect can be slow; type the full URL
+
+### 2. Hard refresh (clear cache)
+- **Windows/Linux:** `Ctrl + Shift + R` or `Ctrl + F5`
+- **Mac:** `Cmd + Shift + R`
+
+### 3. Try Incognito/Private window
+- **Chrome:** `Ctrl+Shift+N` (Windows) or `Cmd+Shift+N` (Mac)
+- Visit `https://www.authkeep.com` — rules out extensions/cache
+
+### 4. Flush DNS cache
+- **Mac:** Open Terminal → `sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder`
+- **Windows:** Open CMD as Admin → `ipconfig /flushdns`
+
+### 5. Try the GitHub URL first
+- Visit **https://binayapuri.github.io/Authkeep/** — if this works but www.authkeep.com doesn't, it's a DNS/redirect issue
+
+### 6. Check Chrome DevTools
+- Press `F12` → **Console** tab — look for red errors
+- **Network** tab — check if any requests fail (red)
+
+---
+
 ## Summary Checklist
 
 - [ ] GitHub Pages enabled (Source: Deploy from a branch, gh-pages)
