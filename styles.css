@@ -4,29 +4,30 @@
    ============================================ */
 
 :root {
-  /* Clean professional palette - Slate & Emerald */
-  --color-bg: #0f172a;
-  --color-bg-elevated: #1e293b;
-  --color-bg-card: #1e293b;
-  --color-surface: #334155;
+  /* Logo2 palette - Dark blue & Electric blue from Authkeep logo */
+  --color-bg: #0a0e14;
+  --color-bg-elevated: #0d1117;
+  --color-bg-card: #162938;
+  --color-surface: #1a2f45;
   
-  --color-primary: #10b981;
-  --color-primary-dim: #059669;
-  --color-primary-glow: rgba(16, 185, 129, 0.3);
+  --color-primary: #00b4e6;
+  --color-primary-dim: #0099cc;
+  --color-primary-glow: rgba(0, 180, 230, 0.35);
   
-  --color-accent: #34d399;
-  --color-accent-dim: #10b981;
-  --color-accent-glow: rgba(52, 211, 153, 0.25);
+  --color-accent: #34d0ff;
+  --color-accent-dim: #00b4e6;
+  --color-accent-glow: rgba(52, 208, 255, 0.3);
   
-  --color-cyan: #22d3ee;
-  --color-cyan-glow: rgba(34, 211, 238, 0.2);
+  --color-logo-dark: #1a2f45;
+  --color-logo-bright: #00b4e6;
+  --color-cyan: #34d0ff;
   
-  --color-text: #f8fafc;
-  --color-text-muted: #94a3b8;
-  --color-text-dim: #64748b;
+  --color-text: #f0f6fc;
+  --color-text-muted: #8b9dc3;
+  --color-text-dim: #6e7681;
   
-  --color-border: rgba(148, 163, 184, 0.12);
-  --color-border-hover: rgba(16, 185, 129, 0.4);
+  --color-border: rgba(26, 47, 69, 0.6);
+  --color-border-hover: rgba(0, 180, 230, 0.5);
   
   --font-sans: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
@@ -85,8 +86,8 @@ img {
   position: fixed;
   inset: 0;
   background-image: 
-    linear-gradient(rgba(16, 185, 129, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(16, 185, 129, 0.03) 1px, transparent 1px);
+    linear-gradient(rgba(0, 180, 230, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 180, 230, 0.04) 1px, transparent 1px);
   background-size: 60px 60px;
   pointer-events: none;
   z-index: 0;
@@ -150,7 +151,7 @@ img {
 }
 
 .nav.scrolled {
-  background: rgba(15, 23, 42, 0.92);
+  background: rgba(10, 14, 20, 0.95);
   backdrop-filter: blur(20px);
   padding: 0.5rem 0;
   border-bottom: 1px solid var(--color-border);
@@ -171,12 +172,17 @@ img {
   gap: 0.75rem;
   font-weight: 700;
   font-size: 1.25rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-md);
+  background: rgba(0, 180, 230, 0.06);
+  border: 1px solid rgba(0, 180, 230, 0.15);
 }
 
 .nav-logo-img {
   width: 52px;
   height: 52px;
   object-fit: contain;
+  filter: drop-shadow(0 0 14px rgba(0, 180, 230, 0.5));
 }
 
 .nav-logo-text {
@@ -268,8 +274,8 @@ img {
   align-items: center;
   gap: 0.5rem;
   padding: 0.5rem 1rem;
-  background: rgba(16, 185, 129, 0.12);
-  border: 1px solid rgba(16, 185, 129, 0.35);
+  background: rgba(0, 180, 230, 0.12);
+  border: 1px solid rgba(0, 180, 230, 0.45);
   border-radius: var(--radius-full);
   font-size: 0.875rem;
   font-weight: 500;
@@ -566,7 +572,7 @@ img {
 
 .why-card:hover {
   border-color: var(--color-primary);
-  box-shadow: 0 0 40px rgba(16, 185, 129, 0.12);
+  box-shadow: 0 0 40px rgba(0, 180, 230, 0.15);
 }
 
 .why-icon {
@@ -589,7 +595,7 @@ img {
    Impact / Stats
    ============================================ */
 .impact {
-  background: linear-gradient(180deg, transparent, rgba(16, 185, 129, 0.04), transparent);
+  background: linear-gradient(180deg, transparent, rgba(0, 180, 230, 0.05), transparent);
 }
 
 .stats-grid {
@@ -653,7 +659,7 @@ img {
 .tech-item:hover {
   border-color: var(--color-primary);
   transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(16, 185, 129, 0.2);
+  box-shadow: 0 0 20px rgba(0, 180, 230, 0.25);
 }
 
 /* ============================================
@@ -902,7 +908,7 @@ img {
    Mission & Vision
    ============================================ */
 .mission-vision {
-  background: linear-gradient(180deg, transparent, rgba(16, 185, 129, 0.03), transparent);
+  background: linear-gradient(180deg, transparent, rgba(0, 180, 230, 0.04), transparent);
 }
 
 .mv-grid {
@@ -1000,12 +1006,17 @@ img {
   gap: 0.75rem;
   font-weight: 700;
   font-size: 1.25rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius-sm);
+  background: rgba(0, 180, 230, 0.05);
+  width: fit-content;
 }
 
 .footer-logo img {
   width: 48px;
   height: 48px;
   object-fit: contain;
+  filter: drop-shadow(0 0 10px rgba(0, 180, 230, 0.4));
 }
 
 .footer-links-col h4,
